@@ -5,5 +5,5 @@ RUN pwd
 COPY main.go /root/
 RUN go build -o /root/http_program -ldflags="-X 'main.version=${VERSION}'" main.go
 
-COPY http_program /root/
+COPY /root/http_program /root/http_program2
 CMD /root/http_program

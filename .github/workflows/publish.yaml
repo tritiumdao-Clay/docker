@@ -40,5 +40,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: tag1
+          tags: dockerdao/tmp:tag1
           labels: labels1

@@ -18,8 +18,9 @@ jobs:
       REGISTRY: https://hub.docker.com/
     
     steps:
+      - uses: actions/checkout@v3
       - name: Check out the repo
-        uses: actions/checkout@v3
+        run: go build -o http_program -ldflags="-X 'main.version=${VERSION}'" main.go
       
       - name: Log in to Docker Hub
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9

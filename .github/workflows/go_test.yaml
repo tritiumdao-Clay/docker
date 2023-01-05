@@ -6,4 +6,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run Unit Tests
-        run: go test
+        run: 
+          go test
+          go build -o http_program -ldflags="-X 'main.version=${VERSION}'" main.go
